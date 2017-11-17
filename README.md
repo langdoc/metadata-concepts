@@ -80,42 +80,42 @@ irrelevant where they are stored.
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
-<td style="text-align: left;">Lat-session/History</td>
+<td style="text-align: left;">lat-session/History</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">session_name</td>
-<td style="text-align: left;">Lat-session/Name</td>
+<td style="text-align: left;">lat-session/Name</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">session_title</td>
-<td style="text-align: left;">Lat-session/Title</td>
+<td style="text-align: left;">lat-session/Title</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">session_date</td>
-<td style="text-align: left;">Lat-session/Date</td>
+<td style="text-align: left;">lat-session/Date</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">session_description</td>
-<td style="text-align: left;">Lat-session/descriptions/Description</td>
+<td style="text-align: left;">lat-session/descriptions/Description</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">session_continent</td>
-<td style="text-align: left;">Lat-session/Location/Continent</td>
+<td style="text-align: left;">lat-session/Location/Continent</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">session_country</td>
-<td style="text-align: left;">Lat-session/Location/Country</td>
+<td style="text-align: left;">lat-session/Location/Country</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">session_address</td>
-<td style="text-align: left;">Lat-session/Location/Address</td>
+<td style="text-align: left;">lat-session/Location/Address</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
