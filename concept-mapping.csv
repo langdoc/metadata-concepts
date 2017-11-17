@@ -1,16 +1,16 @@
-Freiburg-Filemaker,R Dataframe,CMDI
+Freiburg-Filemaker,Niko’s R Dataframe,CMDI
 ,,Header/MdCreator
 ,,Header/MdCreationDate
 ,,Header/MdProfile
 ,filename,ResourceProxy/ResourceRef
-,,Lat-session/History
-,session_name,Lat-session/Name
-,session_title,Lat-session/Title
-,session_date,Lat-session/Date
-,session_description,Lat-session/descriptions/Description
-,session_continent,Lat-session/Location/Continent
-,session_country,Lat-session/Location/Country
-,session_address,Lat-session/Location/Address
+,,lat-session/History
+,session_name,lat-session/Name
+,session_title,lat-session/Title
+,session_date,lat-session/Date
+,session_description,lat-session/descriptions/Description
+,session_continent,lat-session/Location/Continent
+,session_country,lat-session/Location/Country
+,session_address,lat-session/Location/Address
 ,session_lat,
 ,session_lon,
 ,project_title,Project/Title
