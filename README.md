@@ -8,7 +8,7 @@ It is obvious that in different environments there are needs to call things diff
 
 When one thinks about relations such as these, storing information relartions into a graph comes fast to mind as one alternative. In other projects, mainly in INEL, graph database has been used as data storage mechanism. This is probably a very good idea. In our model the use of graph structure is mode modest, and just used as one possible representation.
 
-So very central idea here is that the same data is represented in CMDI XML, mysql database and graph database, and there is a seamless connection between these. What we need is the ability to access values themselves, and for this it should be irrelevant where they are stored.
+So very central idea here is that whether same data is represented in CMDI XML, mysql database or graph database is irrelevant, as there should be a seamless connection between these. What we need is the ability to access values themselves, and for this it should be irrelevant where they are stored.
 
 Table below created with Dmitriy Levchenko.
 
