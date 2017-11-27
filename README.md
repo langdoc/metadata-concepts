@@ -1,20 +1,36 @@
 metadata-concepts
 =================
 
-I’m not a big fan of standardization attempts when it comes to formats,
-as this often leads to endless discussion about **the format
-structure**, which in many ways is the least important, most mechanical,
-part of the question. It is more important to think about the data and
-in generally what kind of values we have. It seems that these values
+This repository contains a listing of metadata values used in
+[IKDP](https://github.com/langdoc/IKDP) and
+[IKDP-2](https://github.com/langdoc/IKDP-2) language documentation
+projects, and the values are mapped between CMDI, project’s internal
+Filemaker Pro database, and the terms Niko Partanen attempts to use in
+project’s more or less internal R scripts and functions.
+
+The discussion about standards seem to circulate often around **the
+format structure**, which in many ways is the least important, most
+mechanical, part of the question. It is more important to think what
+kind of data and values we have and need. It seems that these values
 eventually are rather similar across projects, although the exact
 implementation and structures would differ. Even more essentially, it
 seems there is kind of a **core** for possible information, without
-which the data is almost unusable to start with.
+which the data is almost unusable to start with. It is essential to know
+**where** something was done, **when** and **with who**, but then there
+are details that are arguably less crucial. One way to think about this
+is that there are some values we just have to have and can have for
+every recording we work with, so there is some kind of a basic minimum
+on which we can compare every item, but then there are attributes which
+exclude some sessions as we don’t have sufficient metadata.
 
-This repository contains a listing of metadata values used in IKDP and
-IKDP-2 language documentation projects, and the values are mapped to
-IMDI, CMDI and project internal mysql database. There will also be
-scripts and stylesheets to shuffle these across one another.
+So more recording sessions we have to exclude from comparison because
+the metadata field in question is lacking, more peripheral that field
+has to be. Someone can argue it is super-important, but if nobody has
+never collected it, then it probably is not. Another example is that for
+M.A. Castrén’s data we can’t really specify the participants or
+locations, whereas for bit newer data such as that of Fokos-Fuchs’s we
+generally can do that, up to a certain degree, so this sets kind of a
+central boundary between these two datasets.
 
 It is obvious that in different environments there are needs to call
 things different. What would be in a presentation `English title` is in
@@ -23,12 +39,6 @@ the same concept, and the idea here is to map all these concepts and
 their variants to one another. Similarly different concepts have to be
 mapped to their translations, and ideally everything would be done in a
 manner where each piece of information would be stored only once.
-
-So very central idea here is that whether same data is represented in
-CMDI XML, mysql database or graph database is irrelevant, as there
-should be a seamless connection between these. What we need is the
-ability to access values themselves, and for this it not be that
-important where they are stored.
 
 <table>
 <thead>
@@ -65,12 +75,12 @@ important where they are stored.
 <td style="text-align: left;">lat-session/History</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"></td>
+<td style="text-align: left;">Session_name</td>
 <td style="text-align: left;">session_name</td>
 <td style="text-align: left;">lat-session/Name</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"></td>
+<td style="text-align: left;">Title_eng</td>
 <td style="text-align: left;">session_title</td>
 <td style="text-align: left;">lat-session/Title</td>
 </tr>
@@ -367,6 +377,16 @@ Tasks
 
 -   Setting up Travis CI to compile README.Rmd automatically
 -   Add new values and mappings
+-   There has to be some way to indicate that things like **session
+    date** is actually stored only in the session name.
+    -   For example, there are conventions such as session name has
+        fields:
+        `{language}_{variety}{year}{month}{date}{nth-recording of a day}`
+    -   So session date value actually maps into `{year}{month}{date}`
+        complex in the session name… Maybe not ideal, but if you have
+        that value somewhere in the database, then you have to maintain
+        two distinct values, and having it in filename just makes
+        browsing files million times easier!
 
 Notes about fields to be added
 ------------------------------

@@ -4,8 +4,8 @@ Freiburg-Filemaker,Niko’s R Dataframe,CMDI
 ,,Header/MdProfile
 ,filename,ResourceProxy/ResourceRef
 ,,lat-session/History
-,session_name,lat-session/Name
-,session_title,lat-session/Title
+Session_name,session_name,lat-session/Name
+Title_eng,session_title,lat-session/Title
 ,session_date,lat-session/Date
 ,session_description,lat-session/descriptions/Description
 ,session_continent,lat-session/Location/Continent
