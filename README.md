@@ -42,6 +42,12 @@ and ideally everything would be done in a manner where each piece of
 information would be stored only once.
 
 <table>
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 16%" />
+<col style="width: 39%" />
+<col style="width: 14%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Freiburg-Filemaker</th>
@@ -82,13 +88,13 @@ information would be stored only once.
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Session_name</td>
+<td style="text-align: left;">Sessions::Session_name</td>
 <td style="text-align: left;">session_name</td>
 <td style="text-align: left;">lat-session/Name/</td>
 <td style="text-align: left;">{filename}</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Title_eng</td>
+<td style="text-align: left;">Sessions::Title_eng</td>
 <td style="text-align: left;">session_title</td>
 <td style="text-align: left;">lat-session/Title</td>
 <td style="text-align: left;"></td>
@@ -178,7 +184,7 @@ information would be stored only once.
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">genre</td>
+<td style="text-align: left;">Sessions::Genre</td>
 <td style="text-align: left;">genre</td>
 <td style="text-align: left;">Content/Genre</td>
 <td style="text-align: left;"></td>
@@ -214,7 +220,7 @@ information would be stored only once.
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">planning_level</td>
+<td style="text-align: left;">Sessions::Session_arrangement_level</td>
 <td style="text-align: left;">planning_level</td>
 <td style="text-align: left;">Content/CommunicationContext/PlanningType</td>
 <td style="text-align: left;"></td>
@@ -244,7 +250,7 @@ information would be stored only once.
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Role</td>
+<td style="text-align: left;">Actor_links::Role</td>
 <td style="text-align: left;">participant_role</td>
 <td style="text-align: left;">Actors/Actor/Role</td>
 <td style="text-align: left;"></td>
@@ -268,25 +274,25 @@ information would be stored only once.
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"></td>
+<td style="text-align: left;">Actors::Ethnicity</td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Actors/Actor/EthnicGroup</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"></td>
+<td style="text-align: left;">Actors::Birthtime_year</td>
 <td style="text-align: left;">birthdate</td>
 <td style="text-align: left;">Actors/Actor/Birthdate</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"></td>
+<td style="text-align: left;">Actors::Sex</td>
 <td style="text-align: left;">sex</td>
 <td style="text-align: left;">Actors/Actor/Sex</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"></td>
+<td style="text-align: left;">Actors::Education</td>
 <td style="text-align: left;">education</td>
 <td style="text-align: left;">Actors/Actor/Education</td>
 <td style="text-align: left;"></td>
@@ -316,26 +322,26 @@ information would be stored only once.
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"></td>
+<td style="text-align: left;">Sessions::Recording_quality</td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Resources/MediaFile/Quality</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">RecordingConditions</td>
+<td style="text-align: left;">Sessions::Recording_conditions</td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Resources/MediaFile/RecordingConditions</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
-<td style="text-align: left;">time_end</td>
+<td style="text-align: left;"></td>
 <td style="text-align: left;">Resources/MediaFile/TimePosition/Start</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
-<td style="text-align: left;">time_start</td>
+<td style="text-align: left;"></td>
 <td style="text-align: left;">Resources/MediaFile/TimePosition/End</td>
 <td style="text-align: left;"></td>
 </tr>
@@ -453,6 +459,8 @@ Tasks
         that value somewhere in the database, then you have to maintain
         two distinct values, and having it in filename just makes
         browsing files million times easier!
+-   How one specifies that `age` is a calculated from birth time and
+    session’s recording time?
 
 Notes about fields to be added
 ------------------------------

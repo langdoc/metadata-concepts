@@ -33,6 +33,7 @@ read_csv('concept-mapping.csv', col_types = 'cccc', na = " ", quoted_na = TRUE) 
 - There has to be some way to indicate that things like **session date** is actually stored only in the session name.
     - For example, there are conventions such as session name has fields: `{language}_{variety}{year}{month}{date}{nth-recording of a day}`
     - So session date value actually maps into `{year}{month}{date}` complex in the session name… Maybe not ideal, but if you have that value somewhere in the database, then you have to maintain two distinct values, and having it in filename just makes browsing files million times easier!
+- How one specifies that `age` is a calculated from birth time and session's recording time?
 
 ## Notes about fields to be added
 
