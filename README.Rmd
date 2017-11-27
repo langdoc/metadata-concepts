@@ -1,7 +1,5 @@
 ---
-title: "Untitled"
 author: "Niko Partanen"
-date: "11/17/2017"
 output: md_document
 editor_options: 
   chunk_output_type: console
@@ -24,7 +22,7 @@ It is obvious that in different environments there are needs to call things diff
 
 ```{r, echo=FALSE}
 suppressPackageStartupMessages(library(tidyverse))
-read_csv('concept-mapping.csv', col_types = 'ccc', na = " ", quoted_na = TRUE) %>%
+read_csv('concept-mapping.csv', col_types = 'cccc', na = " ", quoted_na = TRUE) %>%
   knitr::kable(format = "markdown")
 ```
 

@@ -41,18 +41,13 @@ Similarly different concepts have to be mapped to their translations,
 and ideally everything would be done in a manner where each piece of
 information would be stored only once.
 
-    ## Warning: Unnamed `col_types` should have the same length as `col_names`.
-    ## Using smaller of the two.
-
-    ## Warning: 2 parsing failures.
-    ## row # A tibble: 2 x 5 col     row   col  expected    actual                  file expected   <int> <chr>     <chr>     <chr>                 <chr> actual 1    35  <NA> 3 columns 4 columns 'concept-mapping.csv' file 2    56  <NA> 3 columns 4 columns 'concept-mapping.csv'
-
 <table>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Freiburg-Filemaker</th>
 <th style="text-align: left;">Niko’s R Dataframe</th>
 <th style="text-align: left;">CMDI</th>
+<th style="text-align: left;">ELAN</th>
 </tr>
 </thead>
 <tbody>
@@ -60,321 +55,385 @@ information would be stored only once.
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Header/MdCreator</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Header/MdCreationDate</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Header/MdProfile</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">filename</td>
 <td style="text-align: left;">ResourceProxy/ResourceRef</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">lat-session/History</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Session_name</td>
 <td style="text-align: left;">session_name</td>
-<td style="text-align: left;">lat-session/Name/{filename}</td>
+<td style="text-align: left;">lat-session/Name/</td>
+<td style="text-align: left;">{filename}</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Title_eng</td>
 <td style="text-align: left;">session_title</td>
 <td style="text-align: left;">lat-session/Title</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">session_date</td>
 <td style="text-align: left;">lat-session/Date</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">session_description</td>
 <td style="text-align: left;">lat-session/descriptions/Description</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">session_continent</td>
 <td style="text-align: left;">lat-session/Location/Continent</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">session_country</td>
 <td style="text-align: left;">lat-session/Location/Country</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">session_address</td>
 <td style="text-align: left;">lat-session/Location/Address</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">session_lat</td>
+<td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">session_lon</td>
 <td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">project_title</td>
 <td style="text-align: left;">Project/Title</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">project_id</td>
 <td style="text-align: left;">Project/Id</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Project/Contact/Name</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Project/Contact/Address</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Project/Contact/Email</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Project/Contact/Organization</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Project/descriptions/Description</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">genre</td>
 <td style="text-align: left;">genre</td>
 <td style="text-align: left;">Content/Genre</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">subgenre</td>
 <td style="text-align: left;">Content/Subgenre</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Content/Task</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Content/Modalities</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Content/Subject</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Content/CommunicationContext/Interactivity</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">planning_level</td>
 <td style="text-align: left;">planning_level</td>
 <td style="text-align: left;">Content/CommunicationContext/PlanningType</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Content/CommunicationContext/Involvement</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Content/CommunicationContext/SocialContext</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Content/CommunicationContext/EventStructure</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Content/CommunicationContext/Channel</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Role</td>
 <td style="text-align: left;">participant_role</td>
 <td style="text-align: left;">Actors/Actor/Role</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Actors/Actor/FullName</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"></td>
+<td style="text-align: left;">Naming_convention</td>
 <td style="text-align: left;">participant</td>
 <td style="text-align: left;">Actors/Actor/Code</td>
+<td style="text-align: left;"><a href="mailto:TIER/@PARTICIPANT">TIER/@PARTICIPANT</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Actors/Actor/FamilySocialRole</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Actors/Actor/EthnicGroup</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">birthdate</td>
 <td style="text-align: left;">Actors/Actor/Birthdate</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">sex</td>
 <td style="text-align: left;">Actors/Actor/Sex</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">education</td>
 <td style="text-align: left;">Actors/Actor/Education</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">age</td>
 <td style="text-align: left;">Actors/Actor/Age</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Resources/MediaFile/Type</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">fileformat</td>
 <td style="text-align: left;">Resources/MediaFile/Format</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Resources/MediaFile/Size</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Resources/MediaFile/Quality</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">RecordingConditions</td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Resources/MediaFile/RecordingConditions</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">time_end</td>
 <td style="text-align: left;">Resources/MediaFile/TimePosition/Start</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">time_start</td>
 <td style="text-align: left;">Resources/MediaFile/TimePosition/End</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Resources/WrittenResource/Date</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Resources/WrittenResource/Type</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Resources/WrittenResource/Format</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Resources/WrittenResource/Size</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Resources/WrittenResource/Derivation</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Resources/WrittenResource/CharacterEncoding</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Resources/WrittenResource/ContentEncoding</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;">language</td>
 <td style="text-align: left;">Resources/WrittenResource/LanguageId</td>
+<td style="text-align: left;"><a href="mailto:TIER/@LANG_REF">TIER/@LANG_REF</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Resources/WrittenResource/Anonymized</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Resources/WrittenResource/Validation/Type</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Resources/WrittenResource/Validation/Methodology</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Resources/WrittenResource/Validation/Level</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Resources/WrittenResource/Access/Availability</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Resources/WrittenResource/Access/Date</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Resources/WrittenResource/Access/Owner</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">OriginalPublication</td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Resources/WrittenResource/Access/Publisher</td>
+<td style="text-align: left;"></td>
 </tr>
 </tbody>
 </table>
