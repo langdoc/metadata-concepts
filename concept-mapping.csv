@@ -1,10 +1,10 @@
-Freiburg-Filemaker,Niko’s R Dataframe,CMDI
+Freiburg-Filemaker,Niko’s R Dataframe,CMDI,ELAN
 ,,Header/MdCreator
 ,,Header/MdCreationDate
 ,,Header/MdProfile
 ,filename,ResourceProxy/ResourceRef
 ,,lat-session/History
-Session_name,session_name,lat-session/Name
+Session_name,session_name,lat-session/Name/{filename}
 Title_eng,session_title,lat-session/Title
 ,session_date,lat-session/Date
 ,session_description,lat-session/descriptions/Description
@@ -33,7 +33,7 @@ planning_level,planning_level,Content/CommunicationContext/PlanningType
 ,,Content/CommunicationContext/Channel
 Role,participant_role,Actors/Actor/Role
 ,,Actors/Actor/FullName
-,participant,Actors/Actor/Code
+,participant,Actors/Actor/Code,TIER/@PARTICIPANT
 ,,Actors/Actor/FamilySocialRole
 ,,Actors/Actor/EthnicGroup
 ,birthdate,Actors/Actor/Birthdate
@@ -54,7 +54,7 @@ RecordingConditions,,Resources/MediaFile/RecordingConditions
 ,,Resources/WrittenResource/Derivation
 ,,Resources/WrittenResource/CharacterEncoding
 ,,Resources/WrittenResource/ContentEncoding
-,language,Resources/WrittenResource/LanguageId
+,language,Resources/WrittenResource/LanguageId,TIER/@LANG_REF
 ,,Resources/WrittenResource/Anonymized
 ,,Resources/WrittenResource/Validation/Type
 ,,Resources/WrittenResource/Validation/Methodology

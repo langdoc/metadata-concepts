@@ -26,19 +26,26 @@ exclude some sessions as we don’t have sufficient metadata.
 So more recording sessions we have to exclude from comparison because
 the metadata field in question is lacking, more peripheral that field
 has to be. Someone can argue it is super-important, but if nobody has
-never collected it, then it probably is not. Another example is that for
-M.A. Castrén’s data we can’t really specify the participants or
-locations, whereas for bit newer data such as that of Fokos-Fuchs’s we
-generally can do that, up to a certain degree, so this sets kind of a
-central boundary between these two datasets.
+ever collected it, then it probably is not. Another example is that for
+M.A. Castrén’s data (1844) we can’t really specify the participants or
+locations, whereas for bit newer data such as that of Fokos-Fuchs’s
+(1913) we generally can do that, up to a certain degree, so this sets
+kind of a non-arbitrary boundary between these two datasets.
 
 It is obvious that in different environments there are needs to call
-things different. What would be in a presentation `English title` is in
-database `title-en` and in R dataframe `title_en`. All these refer to
-the same concept, and the idea here is to map all these concepts and
-their variants to one another. Similarly different concepts have to be
-mapped to their translations, and ideally everything would be done in a
-manner where each piece of information would be stored only once.
+things different. What would be in a presentation or on a website
+`English title` is in database something like `title-en` and in R
+dataframe `title_en`. All these refer to the same concept, and the idea
+here is to map all these concepts and their variants to one another.
+Similarly different concepts have to be mapped to their translations,
+and ideally everything would be done in a manner where each piece of
+information would be stored only once.
+
+    ## Warning: Unnamed `col_types` should have the same length as `col_names`.
+    ## Using smaller of the two.
+
+    ## Warning: 2 parsing failures.
+    ## row # A tibble: 2 x 5 col     row   col  expected    actual                  file expected   <int> <chr>     <chr>     <chr>                 <chr> actual 1    35  <NA> 3 columns 4 columns 'concept-mapping.csv' file 2    56  <NA> 3 columns 4 columns 'concept-mapping.csv'
 
 <table>
 <thead>
@@ -77,7 +84,7 @@ manner where each piece of information would be stored only once.
 <tr class="even">
 <td style="text-align: left;">Session_name</td>
 <td style="text-align: left;">session_name</td>
-<td style="text-align: left;">lat-session/Name</td>
+<td style="text-align: left;">lat-session/Name/{filename}</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Title_eng</td>
