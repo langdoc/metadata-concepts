@@ -37,17 +37,6 @@ should be a seamless connection between these. What we need is the
 ability to access values themselves, and for this it should be
 irrelevant where they are stored.
 
-    ## ── Attaching packages ─────────────────────────────────────────────────────────── tidyverse 1.2.0 ──
-
-    ## ✔ ggplot2 2.2.1.9000     ✔ purrr   0.2.4     
-    ## ✔ tibble  1.3.4          ✔ dplyr   0.7.4     
-    ## ✔ tidyr   0.7.2          ✔ stringr 1.2.0     
-    ## ✔ readr   1.1.1          ✔ forcats 0.2.0
-
-    ## ── Conflicts ────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
-    ## ✖ dplyr::filter() masks stats::filter()
-    ## ✖ dplyr::lag()    masks stats::lag()
-
 <table>
 <thead>
 <tr class="header">
@@ -389,7 +378,8 @@ Tasks
 Notes about fields to be added
 ------------------------------
 
-Table below created with Dmitriy Levchenko.
+Table below created with Dmitriy Levchenko. It mainly contains fields we
+need to get into our system in Syktyvkar.
 
 -   participant
     -   participant-id
@@ -432,35 +422,35 @@ Table below created with Dmitriy Levchenko.
 As a relational database, same structure, approximately, can be
 expressed like this:
 
--   Информанты
+-   Participants
     -   Id
     -   Name
     -   Family
-    -   Otchestvo
-    -   God
-    -   Mesto rojdeniya id
-    -   Mesto jitelstva id
-    -   Foto
-    -   Pol
--   Записи
+    -   Patronym
+    -   Year
+    -   Birthplace id
+    -   Place of residence id
+    -   Picture (id?)
+    -   Gender
+-   Session
     -   Id
-    -   Mesto zapisi id
+    -   Recording place id
     -   Time
-    -   Tematika
+    -   Topics
     -   Title-ru
     -   Title-en
-    -   Status (готовый и т.д.)
-    -   Nazvanie faila
+    -   Status (segmented, transcribed etc.)
+    -   Session name
     -   Comments
     -   Project
-    -   Istochnik
+    -   Source (published somewhere etc.)
     -   Description
--   Связи
-    -   Id informant
-    -   Id zaps
-    -   Rol
--   Место
+-   Connections
+    -   Id participant
+    -   Id session
+    -   Role
+-   Places
     -   Id
-    -   Nazvanie ru
-    -   Nazvanie kv
-    -   Coordinaty
+    -   Name rus
+    -   Name kpv
+    -   Coordinates

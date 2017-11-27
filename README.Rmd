@@ -25,7 +25,7 @@ When one thinks about relations such as these, storing information relartions in
 So very central idea here is that whether same data is represented in CMDI XML, mysql database or graph database is irrelevant, as there should be a seamless connection between these. What we need is the ability to access values themselves, and for this it should be irrelevant where they are stored.
 
 ```{r, echo=FALSE}
-library(tidyverse)
+suppressPackageStartupMessages(library(tidyverse))
 read_csv('concept-mapping.csv', col_types = 'ccc', na = " ", quoted_na = TRUE) %>%
   knitr::kable(format = "markdown")
 ```
@@ -37,7 +37,7 @@ read_csv('concept-mapping.csv', col_types = 'ccc', na = " ", quoted_na = TRUE) %
 
 ## Notes about fields to be added
 
-Table below created with Dmitriy Levchenko.
+Table below created with Dmitriy Levchenko. It mainly contains fields we need to get into our system in Syktyvkar.
 
 - participant
     - participant-id
@@ -79,36 +79,36 @@ Table below created with Dmitriy Levchenko.
 
 As a relational database, same structure, approximately, can be expressed like this:
 
-- Информанты
+- Participants
     - Id
     - Name
     - Family
-    - Otchestvo
-    - God
-    - Mesto rojdeniya id
-    - Mesto jitelstva id
-    - Foto
-    - Pol
-- Записи
+    - Patronym
+    - Year
+    - Birthplace id
+    - Place of residence id
+    - Picture (id?)
+    - Gender
+- Session
     - Id
-    - Mesto zapisi id
+    - Recording place id
     - Time
-    - Tematika
+    - Topics
     - Title-ru
     - Title-en
-    - Status (готовый и т.д.)
-    - Nazvanie faila
+    - Status (segmented, transcribed etc.)
+    - Session name
     - Comments
     - Project
-    - Istochnik
+    - Source (published somewhere etc.)
     - Description
-- Связи
-    - Id informant
-    - Id zaps
-    - Rol
-- Место
+- Connections
+    - Id participant
+    - Id session
+    - Role
+- Places
     - Id
-    - Nazvanie ru
-    - Nazvanie kv
-    - Coordinaty
+    - Name rus
+    - Name kpv
+    - Coordinates
 
